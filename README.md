@@ -1,13 +1,14 @@
 # User Crud With NestJS
 
-Simple user crud using all industry standards.
+Simple user crud using all industry standards. This project also have
+automated tests follow the concepts of DDD, Clean Arch e Design Pattens.
+
+![clean architecture explanation](https://blog.cleancoder.com/uncle-bob/images/2012-08-13-the-clean-architecture/CleanArchitecture.jpg)
 
 ## Dependencies
 
 - Node.js version 18 or higher.
 - Docker.
-- VS Code or similar.
-- Insomnia or similar.
 - NestJS CLI.
 - Prisma ORM CLI.
 
