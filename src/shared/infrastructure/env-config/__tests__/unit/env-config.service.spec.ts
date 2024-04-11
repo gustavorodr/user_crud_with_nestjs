@@ -3,7 +3,6 @@ import { EnvConfigService } from '../../env-config.service'
 import { EnvConfigModule } from '../../env-config.module'
 
 describe('EnvConfigService unit tests', () => {
-  // system under test
   let sut: EnvConfigService
 
   beforeEach(async () => {
