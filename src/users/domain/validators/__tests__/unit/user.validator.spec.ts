@@ -85,4 +85,38 @@ describe('UserValidator unit tests', () => {
       ])
     })
   })
+
+  describe('Password field', () => {
+    it('Invalidations cases for password field.', () => {
+      let isValid = sut.validated(null as any)
+      expect(isValid).toBeFalsy()
+      expect(sut.errors['password']).toStrictEqual([
+        'password should not be empty',
+        'password must be a string',
+        'password must be shorter than or equal to 255 characters',
+      ])
+
+      isValid = sut.validated({ ...UserDataBuilder({}), password: '' as any })
+      expect(isValid).toBeFalsy()
+      expect(sut.errors['password']).toStrictEqual([
+        'password should not be empty',
+      ])
+
+      isValid = sut.validated({ ...UserDataBuilder({}), password: 3 as any })
+      expect(isValid).toBeFalsy()
+      expect(sut.errors['password']).toStrictEqual([
+        'password must be a string',
+        'password must be shorter than or equal to 255 characters',
+      ])
+
+      isValid = sut.validated({
+        ...UserDataBuilder({}),
+        password: 'a'.repeat(256),
+      })
+      expect(isValid).toBeFalsy()
+      expect(sut.errors['password']).toStrictEqual([
+        'password must be shorter than or equal to 255 characters',
+      ])
+    })
+  })
 })
