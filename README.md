@@ -1,6 +1,6 @@
 # User Crud With NestJS
 
-Simple user crud using all industry standards. This project also have
+Complete user crud using all industry standards. This project also have
 automated tests follow the concepts of DDD, Clean Arch e Design Pattens.
 
 ![clean architecture explanation](https://blog.cleancoder.com/uncle-bob/images/2012-08-13-the-clean-architecture/CleanArchitecture.jpg)
@@ -36,3 +36,8 @@ automated tests follow the concepts of DDD, Clean Arch e Design Pattens.
 - Application data must be persisted in a Postgres database.
 - All data lists must be paginated with 15 items per page.
 - The user must be identified by a JWT (JSON Web Token).
+
+## Custom implementations
+
+- uuid v4
+- class-validator
